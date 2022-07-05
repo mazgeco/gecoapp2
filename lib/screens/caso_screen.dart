@@ -46,11 +46,6 @@ class CasoScreen extends StatelessWidget {
               Row(
                 children: [
                   MaterialButton(
-                    child: (caso.estadoCaso == 'S')
-                    ? const Text('Aprobar')
-                    : (caso.estadoCaso == 'P')
-                      ? const Text('Pre-cerrar')
-                      : const Text('No definido'),
                     textColor: Colors.white,
                     color: Colors.blueAccent,
                     onPressed: (){
@@ -61,12 +56,16 @@ class CasoScreen extends StatelessWidget {
                         '',
                         false
                       );
-                    }
+                    },
+                    child: (caso.estadoCaso == 'S')
+                    ? const Text('Aprobar')
+                    : (caso.estadoCaso == 'P')
+                      ? const Text('Pre-cerrar')
+                      : const Text('No definido')
                   ),
                   const SizedBox(width: 10),
                   (caso.estadoCaso == 'S')
                   ? MaterialButton(
-                    child: const Text('No aplica'),
                     textColor: Colors.white,
                     color: Colors.blueAccent,
                     onPressed: (){
@@ -77,7 +76,8 @@ class CasoScreen extends StatelessWidget {
                         caso.motivos,
                         true
                       );
-                    }
+                    },
+                    child: const Text('No aplica')
                   )
                   : const SizedBox(width: 0)
                 ],

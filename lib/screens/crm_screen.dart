@@ -65,8 +65,8 @@ class CRMScreen extends StatelessWidget {
     for (var i=0; i<empresas.length; i++) {
       lista.add(
         DropdownMenuItem(
-          child: Text(empresas[i]['nombre_empresa']), 
-          value: empresas[i]['codigo_empresa']
+          value: empresas[i]['codigo_empresa'],
+          child: Text(empresas[i]['nombre_empresa'])
         )
       );
     }
@@ -101,7 +101,6 @@ class CRMScreen extends StatelessWidget {
     return SizedBox(
       width: 220,
       child: ElevatedButton(
-        child: Text(titulo),
         style: style,
         onPressed: (){
           if(casosService.empresa == '0'){
@@ -121,7 +120,8 @@ class CRMScreen extends StatelessWidget {
               default:
             }
           }
-        }
+        },
+        child: Text(titulo)
       ),
     );
   }

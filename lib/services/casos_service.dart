@@ -13,7 +13,7 @@ class CasosService extends ChangeNotifier {
   final storage = const FlutterSecureStorage();
 
   final List<Caso> casos = [];
-  late Caso selectedCaso;
+  //late Caso selectedCaso;
 
   bool isLoading = true;
   bool isSaving = false;
