@@ -22,7 +22,7 @@ class ListaCasosScreen extends StatelessWidget {
         : (casosService.tipoBoton == 'P')
           ? const Text('Casos para pre-cerrar')
           : const Text('No definido'),
-        elevation: 0,
+        elevation: 1,
         backgroundColor: Colors.blueAccent,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios),
